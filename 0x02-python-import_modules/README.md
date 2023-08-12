@@ -21,3 +21,7 @@ This script prints attributes defined by the module.
 Task 5
 ------
 This script imports a variable from another files and prints its value.
+
+Task 100
+--------
+This script imports a 2 modules and then operate as a commandline calculator.
