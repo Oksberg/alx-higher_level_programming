@@ -25,3 +25,15 @@ This script imports a variable from another files and prints its value.
 Task 100
 --------
 This script imports a 2 modules and then operate as a commandline calculator.
+
+Task 101
+--------
+This script prints a byte-like object using the UFT-8 encoding.
+
+Task 102
+--------
+Not done.
+
+Task 103
+--------
+This script prints the alphabet as a string in uppercase using the ascii_uppercase method.
