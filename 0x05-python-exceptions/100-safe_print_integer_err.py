@@ -10,3 +10,7 @@ def safe_print_integer_err(value):
         message = f"Exception: {ve}"
         sys.stderr.write(message)
         return (False)
+    except TypeError as te:
+        message = f"Exception: {te}"
+        sys.stderr.write(message)
+        return (False)
