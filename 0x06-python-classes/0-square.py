@@ -1,8 +1,8 @@
 #!/usr/bins/python3
-
-"""Define a class Square."""
+"""Create a class Square."""
 
 
 class Square:
-    """Represents a square."""
+    """This square object is a real representation of a real world square.
+    """
     pass
