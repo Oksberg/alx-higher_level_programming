@@ -1,6 +1,6 @@
 #!/usr/bins/python3
 
-"""Create a class called Square."""
+"""Define a class Square."""
 class Square:
-    """A class that represents a square."""
+    """Represents a square."""
     pass
