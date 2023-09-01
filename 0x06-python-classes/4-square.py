@@ -36,6 +36,7 @@ class Square:
         be negative.
         """
         return (self.__size)
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
