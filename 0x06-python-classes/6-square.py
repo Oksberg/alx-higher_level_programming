@@ -36,10 +36,10 @@ class Square:
         It prints an empty line if size is 0.
         """
         if self.__size != 0:
-            for row in range(self.__position[1]):
+            for i in range(self.__position[1]):
                 print()
             for i in range(self.__size):
-                for space in range(self.__position[0]):
+                for j in range(self.__position[0]):
                     print("", end="")
                 for j in range(self.__size):
                     print("#", end="")
