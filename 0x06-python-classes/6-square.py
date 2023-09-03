@@ -31,7 +31,7 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
-        """my_print: Prints the Square object to stdout with 
+        """my_print: Prints the Square object to stdout with
         # characters and position.
         It prints an empty line if size is 0.
         """
@@ -75,5 +75,6 @@ class Square:
     def position(self, value):
         for i in range(len(position)):
             if i < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                te = "position must be a tuple of 2 positive integers"
+                raise TypeError(te)
         self.__position = value
