@@ -46,6 +46,7 @@ class Square:
                 print()
         else:
             print()
+            return
 
     @property
     def size(self):
