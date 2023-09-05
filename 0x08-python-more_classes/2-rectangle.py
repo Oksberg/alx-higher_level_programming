@@ -60,6 +60,6 @@ class Rectangle:
     def perimeter(self):
         """This public method returns the perimeter of the object"""
         perimeter = 2 * (self.__width + self.__height)
-        if self.__width == 0 and self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             perimeter = 0
         return perimeter
