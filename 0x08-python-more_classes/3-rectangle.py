@@ -65,11 +65,12 @@ class Rectangle:
         return perimeter
 
     def __str__(self):
-        if self.__width != 0 or self.__height != 0:
+        if self.__width != 0 and self.__height != 0:
             rectangle = ""
             for i in range(self.__width):
                 for j in range(self.__height):
                     rectangle += "#"
                 rectangle += "\n"
+            return rectangle
         else:
             return rectangle
