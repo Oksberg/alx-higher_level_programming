@@ -71,5 +71,12 @@ class Rectangle:
                 for j in range(self.__height):
                     rectangle += "#"
                 rectangle += "\n"
+
+        return rectangle
+
+    def __repr__(self):
+        if self.__width != 0 or self.__height != 0:
+            for i in range(self.__width):
+                return f"Rectangle({self.__width}, {self.__height})"
         else:
-            return rectangle
+            return "Rectangle(0,0)"
