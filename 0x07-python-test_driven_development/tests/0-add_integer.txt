@@ -1,40 +1,103 @@
-def add_integer(a, b=98):
-	"""Addition of 2 integers.
+#0-add_integer.txt
+#Demontrates how "add_integer()" in "0-add_integer.py" module works.
 
+This function, "add_integer()", returns the sum of its 2 arguments.
+For integer and float numbers, it is equivalent to the "+" operator.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
 	>>> add_integer(1, 2)
 	3
+
+It works for float-point numbers too
+
+::
+
+        >>> add_integer(100.3, 2)
+        102
+
+It works with negative numbers.
+
+::
+
 	>>> add_integer(100, -2)
 	98
+
+::
+
+        >>> add_integer(-6, -2)
+        -8
+
+It works when only one argument is provided because be defaults to 98
+
+::
+
 	>>> add_integer(2)
 	100
-	>>> add_integer(100.3, -2)
-	98
-	>>> add_integer(-6, -2)
-	-8
-	>>> add_integer(4, "School")
+
+"add_integer()" raises TypeError exception when one or both arguments is a non-iteger or non-float.
+
+::
+
+        >>> add_integer(4, "School")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+::
+
+	>>> add_integer("School", 4)
 	Traceback (most recent call last):
-		...
-	TypeError: b must be an integer
-	>>> add_integer(None)
+	TypeError: a must be an integer
+
+::
+
+        >>> add_integer(None)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+::
+
+	>>> add_integer(3, None)
 	Traceback (most recent call last):
-        	...
-	TypeError: b must be an integer
-	"""
+        TypeError: b must be an integer
 
-	if not isinstance(a, int):
-        if isinstance(a, float):
-            a = int(a)
-        else:
-            raise TypeError("a must be an integer")
-	elif not isinstance(b, int):
+::
 
-        if isinstance(b, float):
-            b = int(b)
-        else:
-            raise TypeError("b must be an integer")
+	>>> add_integer("day", "school")
+	Traceback (most recent call last):
+        TypeError: a must be an integer
 
-    	return a + b
+"add_integer" fails if infinity is inputed.
 
-if __name__ == "__main__":
-	import doctest
-	doctest.testmod()
+::
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
+
+::
+
+	>>> add_integer(5, float('inf'))
+	Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
+
+"add_integer" fails with NaN numbers
+
+::
+
+	>>> add_integer(float('NaN'))
+	ValueError: cannot convert float NaN to integer
+
+::
+
+	>>> add_integer(3, float('NaN'))
+	ValueError: cannot convert float NaN to integer
+
+It raises a TypeError when no argument is provided.
+
+::
+
+	>>> add_integer()
+	Traceback (most recent call last):
+        TypeError: add_integer() missing 1 required positional argument: 'a'
