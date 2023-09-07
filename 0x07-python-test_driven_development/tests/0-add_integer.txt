@@ -86,13 +86,14 @@ It works when only one argument is provided because be defaults to 98
 
 ::
 
-	>>> add_integer(float('NaN'))
+	>>> add_integer(float("NaN"))
 	ValueError: cannot convert float NaN to integer
 
 ::
 
-	>>> add_integer(3, float('NaN'))
-	ValueError: cannot convert float NaN to integer
+	>>> add_integer(3, float("NaN"))
+	ValueError: cannot convert float Na
+ to integer
 
 It raises a TypeError when no argument is provided.
 
