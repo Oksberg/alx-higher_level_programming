@@ -3,7 +3,7 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """This function search for a specified string and insert another 
+    """This function search for a specified string and insert another
     string after it.
 
     Args:
@@ -13,7 +13,7 @@ def append_after(filename="", search_string="", new_string=""):
     """
 
     file_content = ""
-    with open(filename, "r")  as file:
+    with open(filename, "r") as file:
         for line in file:
             file_content += line
             if search_string in line:
