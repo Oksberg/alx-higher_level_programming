@@ -2,7 +2,6 @@
 """Defines a function that writes string to a text file."""
 
 
-
 def write_file(filename="", text=""):
     """This function writes a string to a text file.
 
