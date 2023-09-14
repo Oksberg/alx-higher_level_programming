@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""Defines a class MyList"""
+
+
 class MyList(list):
-    """Defines a function that sorts data."""
+    """This class MyList inherits from the built-in list."""
 
     def print_sorted(self):
-        """This function returns a list sorted inascending order."""
+        """This function returns a list sorted in ascending order."""
     
         return self.sort()
