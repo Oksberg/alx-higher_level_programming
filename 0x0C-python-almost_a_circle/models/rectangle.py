@@ -2,19 +2,20 @@
 """Defines a class Rectangle."""
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
-    """A representation of a rectangle object. """
+    """A representation of a rectangle, a subclass. """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes attributes for the Rectangle.
 
-        Attributes:
-            width: The width of the Rectangle that defaults to 0
-            height: The height, defaults to 0
-            x: An attribute of the Rectangle, defaults to 0
-            y: An attribute of the Rectangle, defaults to 0
+        Args:
+            width (int): The width of the Rectangle, it is required.
+            height (int): The height, defaults, it is required.
+            x (int): An attribute of the Rectangle, defaults to 0
+            y (int): An attribute of the Rectangle, defaults to 0
         """
 
         self.__width = width
