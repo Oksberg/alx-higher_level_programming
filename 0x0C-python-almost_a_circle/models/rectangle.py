@@ -104,8 +104,13 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Prints a # rep of the Rectangle to stdout."""
+        """Prints a # rep of the Rectangle to stdout taking into
+        account the x and y coordinates"""
+        for k in range(self.y):
+            print()
         for i in range(self.height):
+            for l in range(self.x):
+                print("", end="")
             for j in range(self.width):
                 print("#", end="")
             print()
