@@ -109,4 +109,3 @@ class Rectangle(Base):
             for j in range(self.height):
                 print("#", end="")
             print()
-        
