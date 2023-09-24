@@ -29,6 +29,40 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """Adds args and kwargs.
+
+        Args:
+            *args (int): Order of arguments.
+            - id represents id
+            - size represents the sides of the Square
+            - x represents x-coordinate of the Square
+            - y represents y-coordinate of the Square
+
+            **kwargs (int): a dictionary.
+            - keys represent attribute of Square.
+        """
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            elif len(args) >= 2:
+                self.size = argss[1]
+            elif len(args) >= 3:
+                self.x = args[2]
+            elif len(args) >= 4:
+                self.y = args[3]
+
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'size':
+                    self.size = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
+
     def validate_x(self, value):
         """Calls inherited x getter and setter."""
         self.__x = x
