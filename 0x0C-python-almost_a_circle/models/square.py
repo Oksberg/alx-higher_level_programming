@@ -22,7 +22,7 @@ class Square(Rectangle):
     def size(self):
         """Retrieves size.
         Checks if size is a non-zero positive integer."""
-        return self.width
+        return self.height
 
     @size.setter
     def size(self, value):
@@ -32,6 +32,14 @@ class Square(Rectangle):
             raise ValueError("size must be > 0")
         self.width = value
         self.height = value
+
+    def validate_width(self, value):
+        """Calls inherited width getter and setter."""
+        self.__width = size
+
+    def validate_width(self, value):
+        """Calls inherited height getter and setter."""
+        self.__height = size
 
     def validate_x(self, value):
         """Calls inherited x getter and setter."""
