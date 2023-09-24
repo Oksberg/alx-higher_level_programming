@@ -42,26 +42,30 @@ class Square(Rectangle):
             **kwargs (int): a dictionary.
             - keys represent attribute of Square.
         """
-        if args:
-            if len(args) >= 1:
-                self.id = args[0]
-            elif len(args) >= 2:
-                self.size = argss[1]
-            elif len(args) >= 3:
-                self.x = args[2]
-            elif len(args) >= 4:
-                self.y = args[3]
+        if args is None:
+            self.__init__(self.size, self.x, self.y)
+        elif len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    self.id = arg
+                elif a == 1:
+                    self.size = arg
+                elif a == 2:
+                    self.x = arg
+                elif a == 3:
+                    self.y = arg
+                a += 1
 
-        else:
-            for key, value in kwargs.items():
-                if key == 'id':
-                    self.id = value
-                elif key == 'size':
-                    self.size = value
-                elif key == 'x':
-                    self.x = value
-                elif key == 'y':
-                    self.y = value
+        for key, value in kwargs.items():
+            if key == 'id':
+                self.id = value
+            elif key == 'size':
+                self.size = value
+            elif key == 'x':
+                self.x = value
+            elif key == 'y':
+                self.y = value
 
     def validate_x(self, value):
         """Calls inherited x getter and setter."""
