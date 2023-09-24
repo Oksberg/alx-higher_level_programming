@@ -15,21 +15,29 @@ class Square(Rectangle):
             id (int): id inherited from Rectangle.
         """
 
+        self.size = size
         super().__init__(size, size, x, y, id)
 
-    def validate_width(self, size):
-        """Calls inherited width getter and setter."""
-        self.__width = size
+    @property
+    def size(self):
+        """Retrieves size.
+        Checks if size is a non-zero positive integer."""
+        return self.width
 
-    def validate_width(self, size):
-        """Calls inherited height getter and setter."""
-        self.__height = size
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value <= 0:
+            raise ValueError("size must be > 0")
+        self.__width = value
+        self.__height = value
 
     def validate_x(self, value):
         """Calls inherited x getter and setter."""
         self.__x = x
 
-    def validate_x(self, value):
+    def validate_y(self, value):
         """Calls inherited x getter and setter."""
         self.__y = y
 
