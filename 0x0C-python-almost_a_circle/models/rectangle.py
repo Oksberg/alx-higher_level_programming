@@ -125,7 +125,7 @@ class Rectangle(Base):
         return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
 
     def update(self, *args, **kwargs):
-        """Assigns arguments and keyworg arguments
+        """Assigns arguments and keyword arguments
         to the attributes."""
         if args:
             if len(args) >= 1:
@@ -142,3 +142,7 @@ class Rectangle(Base):
         for key, value in kwargs.items():
             if hasattr(self, key):
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle."""
+        return vars(self)
