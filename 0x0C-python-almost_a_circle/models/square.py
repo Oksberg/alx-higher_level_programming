@@ -67,6 +67,11 @@ class Square(Rectangle):
             elif key == 'y':
                 self.y = value
 
+    def to_dictionary(self):
+        """Returns a dictionary representation of Square."""
+        return {'id': self.id, 'size': self.size, 'x': self.x,
+                'y': self.y}
+
     def validate_x(self, value):
         """Calls inherited x getter and setter."""
         self.__x = x
