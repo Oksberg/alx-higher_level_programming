@@ -64,7 +64,7 @@ class Base:
         """
         if dictionary != {}:
             if cls.__name__ == "Rectangle":
-                new = cls(4,7)
+                new = cls(4, 7)
             else:
                 new = cls(4)
             new.update(**dictionary)
@@ -80,4 +80,3 @@ class Base:
                 return [cls.create(**dict) for dict in list_of_dicts]
         except FileNotFoundError:
             return []
-
