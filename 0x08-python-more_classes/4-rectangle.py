@@ -75,7 +75,4 @@ class Rectangle:
         return rectangle
 
     def __repr__(self):
-        if self.__width != 0 or self.__height != 0:
-            return f"Rectangle({self.__width}, {self.__height})"
-        else:
-            return "Rectangle(0,0)"
+        return f"Rectangle({self.__width}, {self.__height})"
