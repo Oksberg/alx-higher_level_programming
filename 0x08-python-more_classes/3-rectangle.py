@@ -73,4 +73,4 @@ class Rectangle:
                 rectangle += "\n"
             return rectangle
         else:
-            return rectangle
+            return ""
