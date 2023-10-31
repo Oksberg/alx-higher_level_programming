@@ -68,13 +68,11 @@ class Rectangle:
         """
         Returns a human-readable string representation of the object.
         """
+        rectangle = ""
         if self.__width != 0 and self.__height != 0:
-            rectangle = ""
             for i in range(self.__width):
                 for j in range(self.__height):
                     rectangle += "#"
                 if i != self.__width - 1:
                     rectangle += "\n"
-            return rectangle
-        else:
-            return ""
+        return rectangle
