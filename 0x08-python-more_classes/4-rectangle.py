@@ -65,6 +65,7 @@ class Rectangle:
             return (2 * (self.__width + self.__height))
 
     def __str__(self):
+        """Returns a human-readable string."""
         if self.__width != 0 or self.__height != 0:
             rectangle = ""
             for i in range(self.__width):
@@ -75,4 +76,5 @@ class Rectangle:
         return rectangle
 
     def __repr__(self):
+        """Returns a representation that can recreate the object."""
         return f"Rectangle({self.__width}, {self.__height})"
