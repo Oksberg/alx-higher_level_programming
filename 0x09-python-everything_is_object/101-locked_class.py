@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""Defines a class."""
+
+
 class LockedClass:
-    def __setattr__(self, name, value):
-        if name != "first_name":
-            raise AttributeError(f"LockedClass' object has no attribute '{name}'")
-        super().__setattr__(name, value)
+    """
+    LockedClass has no attributes but restrict the naming of
+    any new attribute to "first_name".
+    """
+    __slots__ = "first_name"
