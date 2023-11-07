@@ -1,0 +1,33 @@
+#7-base_geometry.txt
+Demonstrates how integer_validator in 7-base_geometry.py works.
+
+integer_validator first checks whether the identifier provided is a string and raises a ValueError if it's not. If it is a string, it proceeds to check whether its provided associated value is a non-zero integer. It raises a TypeError if the value is not an integer, and a ValueError if it's 0 or negative.
+
+Import Class:
+-------------
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Create an instance:
+-------------------
+	>>> bg = BaseGeometry()
+
+Case #0: Test on identifier of type string and value of type int
+
+	>>> bg.integer_validator("my_int", 12)
+	>>>
+
+Case #1: Test on identifier of type string and value of type str
+
+	>>> try:
+	...	bg.integer_validator("name", "John")
+	... except Exception as e:
+	... 	print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] name must be an integer
+
+Case #2 Test on an infinite float value
+
+	>>> try:
+    	...     bg.integer_validator("inf_float", 1e400)
+    	... except Exception as e:
+    	... 	print("[{}] {}".format(e.__class__.__name__, e))
+    	[TypeError] inf_float must be an integer
