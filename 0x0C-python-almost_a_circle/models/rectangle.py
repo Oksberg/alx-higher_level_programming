@@ -106,10 +106,10 @@ class Rectangle(Base):
         for n in range(self.y):
             print()
         for i in range(self.height):
+            for m in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end="")
-            for m in range(self.x):
-                print("", end="")
             print()
 
     def __str__(self):
