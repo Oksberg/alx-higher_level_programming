@@ -117,8 +117,7 @@ class Rectangle(Base):
         Displays a human-readable representation of the Rectangle.
         """
 
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
-        f"{self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Assigns arguments and keyword arguments to
