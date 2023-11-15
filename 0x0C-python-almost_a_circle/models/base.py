@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Creates a Base class that is the super for all the other classes.
+"""
 import json
 
 

@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Creates a class Rectangle that inherits from the Base class and is a
+super class to the Square class.
+"""
 from .base import Base
 
 
@@ -113,7 +117,8 @@ class Rectangle(Base):
         Displays a human-readable representation of the Rectangle.
         """
 
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+        f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Assigns arguments and keyword arguments to
@@ -137,4 +142,5 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Returns a dictionary representation of a Rectangle."""
 
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
