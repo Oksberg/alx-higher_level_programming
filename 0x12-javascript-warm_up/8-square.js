@@ -1,7 +1,6 @@
 #!/usr/bin/node
 const { argv } = require('node:process');
 const size = Number(argv[2]);
-let i = 0;
 let row = '';
 
 if (size) {
@@ -9,9 +8,7 @@ if (size) {
     row += 'x';
   }
 
-  for (let i = 0; i < size; i++)
-  console.log(row);
-
+  for (let i = 0; i < size; i++) { console.log(row); }
 } else {
   console.log('Missing size');
 }
