@@ -2,7 +2,7 @@
 const { argv } = require('node:process');
 const num = Number(argv[2]);
 
-if (num) {
+if (!isNaN(num)) {
   for (let i = 0; i < num; i++) {
     console.log('C is fun');
   }
